@@ -75,9 +75,10 @@ class _RandomNumbersState extends State<RandomNumbers> {
    */
   void showEven() {
     setState(() {
-      //TODO
+      tmpItems = items.where((element) => element.number.isEven);
     });
   }
+
 
   /*
   Convert items to tmpItems but only keep number that is in your student ID
@@ -85,7 +86,7 @@ class _RandomNumbersState extends State<RandomNumbers> {
    */
   void showID() {
     setState(() {
-      //TODO
+      tmpItems = items.where((element) => "630510000".contains(element.number.toString()));
     });
   }
 }
